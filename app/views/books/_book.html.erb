@@ -1,0 +1,23 @@
+
+            <div class="row book-list"> <!-- row for each book__-->
+              <div class="col-sm-3" style='margin-top:20px'>
+                <div class='pull-right'>
+                <img  src='<%= book.thumb_image %>' style='width:160px; height:160px;'> <br/>
+                <p class='mark'><%= book.rating %>/6</p>
+              </div>
+              </div>
+              <div class="col-sm-9">
+                <h2 style="color: gold;"><%= link_to book.title, book %></h2><br/>
+                <%= link_to 'Edit', edit_book_path(book) %>, 
+                <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <p>
+                  <strong>Author: </strong> <%= book.author %> <br/>
+                  <strong>Description: </strong> <%= book.description %><br/>
+                  <% book.genres.each do |genre| %>
+                    <%= link_to genre.name, '#', class: 'label label-primary' %>
+                  <% end %>
+                 
+
+                </p>
+              </div>
+            </div>

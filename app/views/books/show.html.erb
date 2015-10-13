@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div style="padding: 20px;">
+
+              <div class='col-md-4 col-xs-12 '>
+               
+                <%= image_tag(@book.thumb_image) %> <br/>
+                <p class='mark'><%= @book.rating %>/6</p>
+              
+              </div>
+               <div class='col-md-7 col-md-offset-1 col-xs-12' >
+                <h2 style="color: gold;"><%= link_to @book.title, @book %></h2><br/>
+                <%= link_to 'Edit', edit_book_path(@book) %>, 
+                <%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <p>
+                	
+                	
+                  <strong>Author: </strong> <%= @book.author %> <br/>
+                  <strong>Description: </strong> <%= @book.description %><br/>
+                  <% @book.genres.each do |genre| %>
+                    <%= link_to genre.name, '#', class: 'label label-primary' %> <br>
+                  <% end %>
+                 
+                 
+
+                </p>
+              </div>
+           
+
+
+
+</div>

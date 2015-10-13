@@ -1,0 +1,35 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{padding:20px;}
+.finished{
+	color: green;
+}
+.rating {max-width: 97px; font-size: 1.8em; padding-top:8px;}
+.col-sm-8 li{padding-bottom: 1em;}
+.book-form{
+	display: none;
+}
+
+.mark{
+	width: 80px;
+	height: 20px;
+	margin: 1em auto;
+	background-color: #1c4364!important;
+	color: #fff;
+	text-align: center;
+	box-shadow: 4px 4px 10px #204c73;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.book-list:nth-child(2n+2) {
+    background: #e9eff3;
+    padding: 9px;
+}
+
+.edit_book{
+	margin: 0 auto;
+}
